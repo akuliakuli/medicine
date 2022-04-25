@@ -48,7 +48,7 @@ postDataOnPage("http://localhost:3000/menu")
 let elements = document.querySelectorAll(".main_structure_item"),
     modal = document.querySelector(".modal"),
     close = document.querySelector(".close");
-
+let sign = document.querySelector(".main_title");
 
 function closeModal(){
     modal.classList.remove("show");
@@ -86,8 +86,10 @@ modal.addEventListener("click",(e) => {
 
 //CHANGE CONTENT ON WEBPAGE
 let buttons = document.querySelectorAll(".main_menu_item"),
-    contentFirst = document.querySelector(".main_menu_wrapper")
-    contentSec = document.querySelector(".main_structure_wrapper");
+    adminContent = document.querySelector(".main_structure_wrapper"),
+    mainContent = document.querySelector(".main_menu_wrapper"),
+    docsContent = document.querySelector(".main_norm_docs_wrapper");
+
 
 
     function removeActive(){
@@ -100,7 +102,17 @@ let buttons = document.querySelectorAll(".main_menu_item"),
          buttons[i].classList.add("main_menu_item_active");
      }
      addActive(0);
+
      
+     function hideContent(element){
+        element.classList.remove("show");
+        element.classList.add("hide");
+     }
+     function showContent(element){
+         element.classList.remove("hide");
+         element.classList.add("show")
+     }
+
      buttons.forEach(item => {
          item.addEventListener("click", (e) => {
          const target = e.target.closest(".main_menu_item");
@@ -109,8 +121,65 @@ let buttons = document.querySelectorAll(".main_menu_item"),
                  if(target == item){
                      removeActive();
                      addActive(i);
+                     if(buttons[2].classList.contains("main_menu_item_active")){
+                        hideContent(mainContent);
+                        sign.innerHTML = `Структура <strong>диспансера</strong>`
+                        hideContent(docsContent)
+                        showContent(adminContent)
+            
+
+                    }else if(buttons[5].classList.contains("main_menu_item_active")){
+                        hideContent(mainContent)
+                        hideContent(adminContent)
+                        sign.innerHTML = `Нормативные <strong>документы</strong>`
+                        showContent(docsContent)
+                       
+                    }else{
+                        hideContent(adminContent)
+                        sign.innerHTML = `О <strong>нас</strong>`
+                        showContent(mainContent)
+                    }
                  }
              })
          }
         })
         })
+
+
+// DROPDOWN LINKS FUNCTIONALITY
+
+let links = document.querySelectorAll(".dropdown_link");
+
+
+links.forEach((item,i) => {
+    item.addEventListener("click", (e) => {
+        if(e.target && e.target.classList.contains("dropdown_link")){
+            links.forEach((item,i) => {
+                if(e.target == item){
+                    removeActive();
+                    addActive(i);
+                    
+                    if(buttons[2].classList.contains("main_menu_item_active")){
+                        hideContent(mainContent);
+                        sign.innerHTML = `Структура <strong>диспансера</strong>`
+                        hideContent(docsContent)
+                        showContent(adminContent)
+            
+
+                    }else if(buttons[5].classList.contains("main_menu_item_active")){
+                        hideContent(mainContent)
+                        hideContent(adminContent)
+                        sign.innerHTML = `Нормативные <strong>документы</strong>`
+                        showContent(docsContent)
+                       
+                    }else{
+                        hideContent(adminContent)
+                        sign.innerHTML = `О <strong>нас</strong>`
+                        showContent(mainContent)
+                    }
+                }
+
+            })
+        }
+    })
+})
