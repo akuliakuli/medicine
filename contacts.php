@@ -1,3 +1,8 @@
+
+<?php
+    include "url.php"
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Противотуберкулезный диспансер</title>
-    <link rel ="stylesheet" href ="style.css">
     <link rel = "stylesheet" href ="header.css">
+    <link rel ="stylesheet" href ="style.css">
     <link rel ="stylesheet" href ="styles/main.css">
 </head>
 <body>
@@ -21,7 +26,7 @@
                </div>
                <div class ="header_top_bar_buttons">
                    <button class ="header_top_bar_eye"><img src="img/eye 1.png" alt="eye"></button>
-                   <a href ="#" class ="header_top_bar_button">Контактные телефоны</a>
+                   <a href ="<?php echo $config['contacts']?>" target = "_blank" class ="header_top_bar_button">Контактные телефоны</a>
                </div>
            <!-- <div class ="subcontainer"> -->
                  <div class="hamburger">
@@ -32,49 +37,58 @@
        <!-- </div> -->
        </div>
        <ul class ="header_low_menu">
-           <li class ="header_low_item"><a href ="#">Главная </a></li>
+           <li class ="header_low_item"><a href ="<?php echo $config['main']?>" target = "_blank">Главная </a></li>
            <div class="dropdown">
                <span>О нас <img src= "img/Vector 3 (Stroke).png"></span>
                <div class="dropdown-content">
-               <a href ="#" class ="dropdown_link">История диспансера</a>
-               <a href ="#" class ="dropdown_link">Диспансер сегодня</a>
-               <a href ="#" class ="dropdown_link">Структура диспансера</a>
-               <a href ="#" class ="dropdown_link">Вакансии</a>
-               <a href ="#" class ="dropdown_link">Отзывы</a>
-               <a href ="#" class ="dropdown_link">Нормативные документы</a>
+               <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">История диспансера</a>
+               <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Диспансер сегодня</a>
+               <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Структура диспансера</a>
+               <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Вакансии</a>
+               <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Отзывы</a>
+               <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Нормативные документы</a>
                </div>
              </div>
            <!-- <li class ="header_low_item"><a href ="#">О нас <img src ="img/Vector 3 (Stroke).png"></a></li> -->
-           <li class ="header_low_item"><a href ="#">Пациентам </a></li>
-           <li class ="header_low_item"><a href ="#">Специалистам </a></li>
-           <li class ="header_low_item"><a href ="#">Платные услуги </a></li>
+           <li class ="header_low_item"><a href ="<?php echo $config['about']?>" target = "_blank">Пациентам </a></li>
+           <li class ="header_low_item"><a href ="<?php echo $config['section']?>" target = "_blank">Специалистам </a></li>
+           <li class ="header_low_item"><a href ="<?php echo $config['main']?>" target = "_blank">Платные услуги </a></li>
            <li class ="header_low_item"><a href ="#">Контакты</a></li>
        </ul> 
 </header>
 <div class ="main_map_items">
     <h1 class ="map_title main_title"><strong>Контакты</strong></h1>
-    <div class ="main_map_wrap">
-        <img src ="img/Rectangle 22.png" class ="main_bg_photo">
+    <div class ="main_map_container">
+        <img class = "main_map_img" src ="img/Rectangle 22.png">
         <div class ="main_map_box">
-            <p class ="main_mobile_num">Адрес</p>
-            <p class ="main_mobile_descr"> 302027 г. Орел, ул. Цветаева, д.15</p>
-            <p class ="main_mobile_num"> Электронная почта</p>
-            <p class ="main_mobile_descr">
-                buzoptd@yandex.ru</p>
-            <p class ="main_mobile_num">Адрес</p>
-            <p class ="main_mobile_descr"> 302027 г. Орел, ул. Цветаева, д.15</p>
-            <div class ="main_map_item">
-                <h1 class ="main_structure_title">Телефоны</h1>
-                    <div class ="main_description">
-                        <p class ="main_mobile_num">
-                            8 (4862) 41-46-00</p>
-                        <p class ="main_mobile_descr">Главный врач: </p>
-                        <p class ="main_mobile_num">Заместитель главного врача по лечебной работе</p>
-                        <p class ="main_mobile_descr">8 (4862) 41-46-00</p>
-                    </div>
+            <div class ="main_num_item">
+                <p class="main_mobile_num">Адрес</p>
+                <p class ="main_mobile_descr">302027 г. Орел, ул. Цветаева, д.15</p>
             </div>
-        </div>
+            <div class ="main_num_item">
+                <p class="main_mobile_num">Электронная почта</p>
+                <p class ="main_mobile_descr">buzoptd@yandex.ru</p>
+            </div>
+            <div class ="main_num_item">
+                <p class="main_mobile_num">Электронная почта</p>
+                <p class ="main_mobile_descr">buzoptd@yandex.ru</p>
+            </div>
+    
+        <h1 class ="main_structure_title">Телефоны</h1>
+            <div class ="main_num_item">
+                <p class="main_mobile_num">Адрес</p>
+                <p class ="main_mobile_descr">302027 г. Орел, ул. Цветаева, д.15</p>
+            </div>
+            <div class ="main_num_item">
+                <p class="main_mobile_num">Электронная почта</p>
+                <p class ="main_mobile_descr">buzoptd@yandex.ru</p>
+            </div>
+            <div class ="main_num_item">
+                <p class="main_mobile_num">Электронная почта</p>
+                <p class ="main_mobile_descr">buzoptd@yandex.ru</p>
+            </div>
     </div>
+</div>
 </div>
 <div class ="main_content_description">
     <h1 class="title_name main_structure_title">Отделения стационара</h1>
@@ -115,12 +129,12 @@
                 </ul> 
         </div>
         <ul class ="footer_low_menu">
-            <li class ="footer_low_item"><a href ="#">Главная </a></li>
-            <li class ="footer_low_item"><a href ="#">О нас </a></li>
-            <li class ="footer_low_item"><a href ="#">Пациентам </a></li>
-            <li class ="footer_low_item"><a href ="#">Специалистам </a></li>
-            <li class ="footer_low_item"><a href ="#">Платные услуги </a></li>
-            <li class ="footer_low_item"><a href ="#">Контакты</a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['main']?>" target = "_blank"">Главная </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['about']?>" target = "_blank"">О нас </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['about']?>" target = "_blank"">Пациентам </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['section']?>" target = "_blank"">Специалистам </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['contacts']?>" target = "_blank"">Платные услуги </a></li>
+            <li class ="header_low_item"><a href ="#">Контакты</a></li>
         </ul>
     </div>
     <p class ="footer_rights">© 2021 г. Все права защищены. БУЗ Орловской области «Орловский противотуберкулезный диспансер»</p>

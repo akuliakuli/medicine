@@ -1,4 +1,20 @@
+html{
+    height: 100%;
+}
 
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+footer{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;;
+}
 strong {
     position: relative;
   }
@@ -385,6 +401,11 @@ strong::before {
       display: flex;
       margin-bottom: 75px;
   }
+  .main_map_items{
+      display: flex;
+      flex-direction: column;
+      margin-top: 3em;
+  }
   .main_wrapper{
       align-self: center;
       align-items: center;
@@ -393,47 +414,53 @@ strong::before {
       flex-wrap: wrap;
       gap: 20px;
   }
-  .main_map_wrap{
-    display: flex;
-  }
-  .main_map_items{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  .main_map_box{
-      align-self: flex-end;
-      display: flex;
-      flex-direction: column;
-      background: #FFFFFF;
-      position: absolute;
-      z-index: 1;
-  }
-  .main_map_item{
-    display: flex;
-    flex-direction: column;
-  }
-  .main_description{
-      display: flex;
-      flex-direction: column;
-  }
-  .main_bg_photo{
-    min-height: 384px;
-    min-width: 1440px;
-  }
-  .map_title{
-      align-self: flex-start;
-  }
-  .main_content_description{
-      margin-top: 100px;
-      display: flex;
-      flex-direction: column;
-  }
- 
+ .main_map_container{
+     display: flex;
+     flex-direction: column;
+
+ }
+ .main_map_box{
+     min-height: 386px;
+     max-width: 601px;
+     background: #FFFFFF;
+     margin-left: 5em;
+     position: absolute;
+     z-index: 1;
+     display: flex;
+     gap: 50px;
+     flex-wrap: wrap;
+ }
+ .main_map_num{
+     display: flex;
+ }
+ .main_content_description{
+    margin-top: 50px;
+ }
+.container{
+    margin-left: 6em;
+}
+
   .title_name{
       align-self: flex-start;
   }
+  @media(max-width:900px){
+    .container{
+        margin: 0;
+    }
+    .main_map_container{
+        display: flex;
+        position: unset;
+
+    }
+    .main_map_box{
+        position: relative;
+        max-height: 200px;
+        max-width: 601px;
+        background: #FFFFFF;
+    }
+  }
   @media(max-width:800px){
+
       .main_structure_title{
           margin: 0;
       }

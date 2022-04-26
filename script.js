@@ -45,6 +45,7 @@ postDataOnPage("http://localhost:3000/menu")
 
 //MODAL WINDOW
 
+
 let elements = document.querySelectorAll(".main_structure_item"),
     modal = document.querySelector(".modal"),
     close = document.querySelector(".close");

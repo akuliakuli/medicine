@@ -1,3 +1,7 @@
+<?php
+    include "url.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +28,7 @@
                     </div>
                     <div class ="header_top_bar_buttons">
                         <button class ="header_top_bar_eye"><img src="img/eye 1.png" alt="eye"></button>
-                        <a href ="#" class ="header_top_bar_button">Контактные телефоны</a>
+                        <a href ="<?php echo $config['contacts']?>" target="_blank" class ="header_top_bar_button">Контактные телефоны</a>
                     </div>
                 <!-- <div class ="subcontainer"> -->
                       <div class="hamburger">
@@ -39,18 +43,18 @@
                 <div class="dropdown">
                     <span>О нас <img src= "img/Vector 3 (Stroke).png"></span>
                     <div class="dropdown-content">
-                    <a href ="#" class ="dropdown_link">История диспансера</a>
-                    <a href ="#" class ="dropdown_link">Диспансер сегодня</a>
-                    <a href ="#" class ="dropdown_link">Структура диспансера</a>
-                    <a href ="#" class ="dropdown_link">Вакансии</a>
-                    <a href ="#" class ="dropdown_link">Нормативные документы</a>
+                    <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">История диспансера</a>
+                    <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Диспансер сегодня</a>
+                    <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Структура диспансера</a>
+                    <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Вакансии</a>
+                    <a href ="<?php echo $config['about']?>" target = "_blank" class ="dropdown_link">Нормативные документы</a>
                     </div>
                   </div>
                 <!-- <li class ="header_low_item"><a href ="#">О нас <img src ="img/Vector 3 (Stroke).png"></a></li> -->
-                <li class ="header_low_item"><a href ="#">Пациентам </a></li>
-                <li class ="header_low_item"><a href ="#">Специалистам </a></li>
-                <li class ="header_low_item"><a href ="#">Платные услуги </a></li>
-                <li class ="header_low_item"><a href ="#">Контакты</a></li>
+                <li class ="header_low_item"><a href ="<?php echo $config['about']?>" target = "_blank">Пациентам </a></li>
+                <li class ="header_low_item"><a href ="<?php echo $config['section']?>" target = "_blank">Специалистам </a></li>
+                <li class ="header_low_item"><a href ="<?php echo $config['main']?>" target = "_blank">Платные услуги </a></li>
+                <li class ="header_low_item"><a href ="<?php echo $config['contacts']?>" target = "_blank">Контакты</a></li>
             </ul> 
     </header> 
 <main>
@@ -58,11 +62,11 @@
         <nav class ="nav_bar">
             <ul class ="nav-menu">
         <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">Главная </a></li>
-        <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">О нас </a></li>
-        <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">Пациентам </a></li>
-        <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">Специалистам </a></li>
-        <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">Платные услуги </a></li>
-        <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">Контакты</a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['main']?>" target = "_blank" class ="nav-link">О нас </a></li>
+        <li class ="header_low_item nav-menu-item"><a href = "<?php echo $config['about']?>" target = "_blank" class ="nav-link">Пациентам </a></li>
+        <li class ="header_low_item nav-menu-item"><a href = "<?php echo $config['section']?>" target = "_blank" class ="nav-link">Специалистам </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['main']?>" target = "_blank"  class ="nav-link">Платные услуги </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['contacts']?>" target = "_blank"  class ="nav-link">Контакты</a></li>
         </ul>
     </nav>
 </div>
@@ -165,12 +169,12 @@
                 </ul> 
         </div>
         <ul class ="footer_low_menu">
-            <li class ="footer_low_item"><a href ="#">Главная </a></li>
-            <li class ="footer_low_item"><a href ="#">О нас </a></li>
-            <li class ="footer_low_item"><a href ="#">Пациентам </a></li>
-            <li class ="footer_low_item"><a href ="#">Специалистам </a></li>
-            <li class ="footer_low_item"><a href ="#">Платные услуги </a></li>
-            <li class ="footer_low_item"><a href ="#">Контакты</a></li>
+            <li class ="header_low_item"><a href ="#">Главная </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['about']?>" target = "_blank">О нас </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['about']?>" target = "_blank">Пациентам </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['section']?>" target = "_blank">Специалистам </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['main']?>" target = "_blank">Платные услуги </a></li>
+            <li class ="header_low_item"><a href ="<?php echo $config['contacts']?>" target = "_blank">Контакты</a></li>
         </ul>
     </div>
     <p class ="footer_rights">© 2021 г. Все права защищены. БУЗ Орловской области «Орловский противотуберкулезный диспансер»</p>
