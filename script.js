@@ -45,11 +45,10 @@ postDataOnPage("http://localhost:3000/menu")
 
 //MODAL WINDOW
 
-
-let elements = document.querySelectorAll(".main_structure_item"),
+try {
+    let elements = document.querySelectorAll(".main_structure_item"),
     modal = document.querySelector(".modal"),
     close = document.querySelector(".close");
-let sign = document.querySelector(".main_title");
 
 function closeModal(){
     modal.classList.remove("show");
@@ -84,6 +83,9 @@ modal.addEventListener("click",(e) => {
         closeModal();
     }
 })
+} catch (error) {
+    console.log("error")
+}
 
 //CHANGE CONTENT ON WEBPAGE
 let buttons = document.querySelectorAll(".main_menu_item"),

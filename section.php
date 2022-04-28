@@ -9,8 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Противотуберкулезный диспансер</title>
-    <link rel = "stylesheet" href ="header.css">
-    <link rel ="stylesheet" href ="styles/main.css">
+    <link rel ="stylesheet" href ="gulp/style.min.css">
+    <link rel = "stylesheet" href ="gulp/header.min.css">
+    <link rel ="stylesheet" href ="gulp/main.min.css">
 </head>
 <body>
     <header class ="header">
@@ -55,6 +56,18 @@
        </ul> 
 </header>
 <div class ="main_content_descr">
+<div class= "subcontainer">
+        <nav class ="nav_bar">
+            <ul class ="nav-menu">
+        <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">Главная </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['main']?>" target = "_blank" class ="nav-link">О нас </a></li>
+        <li class ="header_low_item nav-menu-item"><a href = "<?php echo $config['about']?>" target = "_blank" class ="nav-link">Пациентам </a></li>
+        <li class ="header_low_item nav-menu-item"><a href = "<?php echo $config['section']?>" target = "_blank" class ="nav-link">Специалистам </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['main']?>" target = "_blank"  class ="nav-link">Платные услуги </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['contacts']?>" target = "_blank"  class ="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+</div>
     <h1 class ="main_structure_title main_sectsection">Отделение для больных туберкулезом легких с множественной лекарственной устойчивостью №1</h1>
   <div class ="main_descr_wrapper">
     <p class ="main_structure_descr">Отделение для больных туберкулезом с множественной лекарственной устойчивостью развернуто на 35 коек круглосуточного стационара. Отделение выполняет следующие функции:</p>

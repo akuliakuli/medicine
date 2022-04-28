@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Противотуберкулезный диспансер</title>
-    <link rel ="stylesheet" href ="style.css">
-    <link rel = "stylesheet" href ="header.css">
-    <link rel ="stylesheet" href ="styles/main.css">
+    <link rel ="stylesheet" href ="gulp/style.min.css">
+    <link rel = "stylesheet" href ="gulp/header.min.css">
+    <link rel ="stylesheet" href ="gulp/main.min.css">
 </head>
 <body>
     <header class ="header">
@@ -56,6 +56,18 @@
        </ul> 
 </header>
 <main>
+<div class= "subcontainer">
+        <nav class ="nav_bar">
+            <ul class ="nav-menu">
+        <li class ="header_low_item nav-menu-item"><a href ="#" class ="nav-link">Главная </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['main']?>" target = "_blank" class ="nav-link">О нас </a></li>
+        <li class ="header_low_item nav-menu-item"><a href = "<?php echo $config['about']?>" target = "_blank" class ="nav-link">Пациентам </a></li>
+        <li class ="header_low_item nav-menu-item"><a href = "<?php echo $config['section']?>" target = "_blank" class ="nav-link">Специалистам </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['main']?>" target = "_blank"  class ="nav-link">Платные услуги </a></li>
+        <li class ="header_low_item nav-menu-item"><a href ="<?php echo $config['contacts']?>" target = "_blank"  class ="nav-link">Контакты</a></li>
+        </ul>
+    </nav>
+</div>
     <h1 class ="main_title">О <strong>нас</strong></h1>
     <ul class ="main_menu_buttons">
         <li class ="main_menu_item">История диспансера</li>
